@@ -238,13 +238,9 @@ CloudFront
 
 最初はECSやALBも検討しましたが、開発段階では常時稼働のコストを増やすより、静的配信とサーバーレスで十分だと判断しました。
 
-CI/CDはGitHub Actionsで設定しています。
+CI/CDはGitHub Actionsで設定しています。Pull RequestとmainへのpushでRuff、pytest、ESLint、TypeScript型チェック、Next.js buildを実行し、最低限の品質ゲートを通すようにしました。
 
-Pull Requestとmainへのpushでは、Python側でRuffとpytest、Web側でESLint、TypeScript型チェック、Next.jsのProduction buildを実行します。開発用環境とはいえ、法令判定や成果物生成のロジックを含むため、最低限の品質ゲートはmainに入る前に通すようにしました。
-
-デプロイはWebとAPIでworkflowを分けています。`web/` が変わったときはNext.jsを静的エクスポートし、S3へsyncしたあとCloudFrontのキャッシュを無効化します。最後にトップページへ疎通確認をかけ、配信まで確認します。
-
-API側は `core/`、`api/`、`lambda/` などが変わったときだけLambdaを更新します。GitHub ActionsからAWSへはOIDCで接続し、長期アクセスキーをGitHub Secretsに置かない構成にしています。Lambdaのzipは一度S3へアップロードしてから更新しています。これは、依存ライブラリを含めたzipが大きくなり、Lambdaの直接アップロード上限に当たったためです。あわせて、Lambdaランタイムに含まれるboto3系の依存や、実行時に不要なMCPサーバー、キャッシュ、テストファイルを除外して、デプロイサイズを抑えるようにしました。
+デプロイはWebとAPIでworkflowを分けています。WebはS3へ静的ファイルを同期してCloudFrontを無効化し、APIはLambdaを更新します。AWS認証はOIDCを使い、長期アクセスキーを置かない構成にしています。
 
 ## 作ってわかったこと
 
