@@ -2,17 +2,19 @@
 title: "CLO義務化時代に、施策の優先順位まで支援するアプリを個人開発している"
 emoji: "🚚"
 type: "tech"
-topics: ["物流", "clo", "python", "fastapi", "aws"]
+topics: ["物流", "clo", "i, "fastapi", "aws"]
 published: true
 ---
 
 :::message
-この記事は、**個人開発**しているCLO支援アプリケーションのコンセプトと実装途中の共有です。法人プロダクトや業務での開発ではなく、ひとりで作っているPoCです。開発用URLはこちらです。
+この記事は、**個人開発**しているCLO支援アプリケーションのコンセプトと実装途中の共有です。法人プロダクトや業務での開発ではなく、ひとりで作っているPoCです。
+
+開発用URLはこちらで、画面ごとの使い方やCLO担当者・営業企画・上長説明向けのおすすめ確認順は、アプリ内の操作ガイドにまとめています。
 
 https://d1zei8qivkf3cr.cloudfront.net/
+:::
 
-画面ごとの使い方や、CLO担当者・営業企画・上長説明向けのおすすめ確認順は、アプリ内の操作ガイドにまとめています。
-
+:::message alert
 開発中のPoCのため、予告なく停止・変更する可能性があります。実在企業の機密データは入力しないでください。法令上の手続や提出判断は、必ず公式資料を確認してください。
 :::
 
@@ -32,11 +34,9 @@ CLOが機能すれば、物流は単なるコスト削減対象ではなくな�
 > その施策は、本当に実行できるのか。
 > 社内で説明できる数字と根拠はあるのか。
 
-この問いに答えるために、Logi-Intel Dashboard というCLO支援アプリケーションを個人開発しています。
+この問いに答えるために、Logi-Intel Dashboard というCLO支援アプリケーションを個人開発しています。物流DXを実行する現場ツールではなく、CLOが物流課題を経営判断に変換するための意思決定支援アプリケーションです。
 
-Logi-Intel Dashboardは、物流DXを実行する現場ツールではなく、CLOが物流課題を経営判断に変換するための意思決定支援アプリケーションです。
-
-この記事では、物流・SCM担当者、CLO候補者、営業・企画・経営層に向けて「何を支援するアプリなのか」を説明しつつ、エンジニア向けにMCPや成果物生成の設計も紹介します。
+この記事では、物流・SCM担当者、CLO候補者、営業・企画・経営層に向けて「何を支援するのか」を説明しつつ、エンジニア向けにMCPや成果物生成の設計も紹介します。
 
 ## なぜ作ったか
 
@@ -155,21 +155,24 @@ GitHubリポジトリは現時点ではPrivateなので、ここではコード�
 
 アーキテクチャは、分析・法令判定・成果物生成の中核ロジックを中心にして、複数の出口を持つ形にしています。
 
-```text
-Open Data APIs / Static Data
-        |
-        v
-Core logic
-  Data clients    e-Stat、気象庁、xROAD、燃料価格など
-  Legal rules     特定荷主判定、改善基準チェック
-  Analytics       ベンチマーク、施策評価、標準化スコア、罠スコア、シナリオ試算
-  Persistence     自社データ、意思決定ログ、施策実行記録
-  Export          PPT、Word、Excel、Markdown生成
-        |
-        +--> FastMCP tools / LLMからの自然言語操作
-        +--> FastAPI REST
-        +--> Next.js dashboard
-        +--> outputs/
+```mermaid
+flowchart TB
+    Ext["Open Data APIs / Static Data"]
+
+    subgraph Core["Core logic"]
+        direction TB
+        DC["Data clients<br/>e-Stat、気象庁、xROAD、燃料価格 など"]
+        LR["Legal rules<br/>特定荷主判定、改善基準チェック"]
+        AN["Analytics<br/>ベンチマーク、施策評価<br/>標準化/罠スコア、シナリオ試算"]
+        PS["Persistence<br/>自社データ、意思決定ログ、施策実行記録"]
+        EX["Export<br/>PPT、Word、Excel、Markdown生成"]
+    end
+
+    Ext --> Core
+    Core --> MCP["FastMCP tools<br/>LLMからの自然言語操作"]
+    Core --> REST["FastAPI REST"]
+    Core --> Web["Next.js dashboard"]
+    Core --> Out["outputs/"]
 ```
 
 重要なのは、判断ロジックをMCPやREST APIやWeb画面に分散させないことです。施策評価、法令判定、成果物生成のロジックは中核部分に集約し、MCPやREST APIはそこへ到達する薄い入口にしています。
@@ -242,12 +245,13 @@ https://d1zei8qivkf3cr.cloudfront.net/
 
 構成は、PoCとして運用コストを抑えるため、CloudFront、S3、API Gateway、Lambdaを中心にしています。
 
-```text
-CloudFront
-  +-- S3: Next.js static export
-  +-- API Gateway HTTP API
-        +-- Lambda: FastAPI
-              +-- SSM Parameter Store
+```mermaid
+flowchart LR
+    User["ユーザー"] --> CF["CloudFront"]
+    CF --> S3["S3<br/>Next.js static export"]
+    CF --> APIGW["API Gateway HTTP API"]
+    APIGW --> LMD["Lambda<br/>FastAPI"]
+    LMD --> SSM["SSM Parameter Store"]
 ```
 
 最初はECSやALBも検討しましたが、開発段階では常時稼働のコストを増やすより、静的配信とサーバーレスで十分だと判断しました。
