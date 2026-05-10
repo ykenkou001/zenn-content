@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">CLO義務化が問うもの</title>
+  <desc id="desc">2026年4月のCLO選任義務化と2026年10月末の初回中長期計画提出期限を対比し、判断材料整備の重要性を示す図。</desc>
+  <defs>
+    <style>
+      text { font-family: 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif; }
+      .navy { fill: #0F1F3D; }
+      .ink { fill: #18243A; }
+      .muted { fill: #687386; }
+      .white { fill: #FFFFFF; }
+      .accent { fill: #C99A2E; }
+      .line { stroke: #D8DEE8; stroke-width: 2; }
+    </style>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0F1F3D" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <g id="background">
+    <rect width="1280" height="720" fill="#F5F7FA"/>
+    <rect x="0" y="0" width="1280" height="104" class="navy"/>
+    <rect x="0" y="104" width="1280" height="8" fill="#C99A2E"/>
+  </g>
+
+  <g id="header">
+    <text x="64" y="68" class="white" font-size="38" font-weight="700">CLO義務化が問うもの</text>
+    <text x="1060" y="66" fill="#DDE5F2" font-size="18" text-anchor="end">2026年制度対応の起点</text>
+  </g>
+
+  <g id="timeline" filter="url(#softShadow)">
+    <rect x="90" y="176" width="500" height="292" rx="6" fill="#FFFFFF"/>
+    <rect x="690" y="176" width="500" height="292" rx="6" fill="#FFFFFF"/>
+    <line x1="590" y1="322" x2="690" y2="322" class="line"/>
+    <path d="M675 304 L706 322 L675 340 Z" fill="#C99A2E"/>
+
+    <rect x="90" y="176" width="500" height="14" fill="#0F1F3D"/>
+    <rect x="690" y="176" width="500" height="14" fill="#C99A2E"/>
+
+    <text x="340" y="282" fill="#0F1F3D" font-size="68" font-weight="800" text-anchor="middle">2026年4月</text>
+    <text x="340" y="350" fill="#18243A" font-size="34" font-weight="700" text-anchor="middle">CLO選任義務化</text>
+    <text x="340" y="400" fill="#687386" font-size="20" text-anchor="middle">管理的地位にある者の選任が始まる</text>
+
+    <text x="940" y="282" fill="#0F1F3D" font-size="68" font-weight="800" text-anchor="middle">2026年10月末</text>
+    <text x="940" y="350" fill="#18243A" font-size="34" font-weight="700" text-anchor="middle">初回中長期計画 提出期限</text>
+    <text x="940" y="400" fill="#687386" font-size="20" text-anchor="middle">施策と根拠を計画として説明する</text>
+  </g>
+
+  <g id="message">
+    <rect x="142" y="532" width="996" height="94" rx="4" fill="#0F1F3D"/>
+    <rect x="142" y="532" width="10" height="94" fill="#C99A2E"/>
+    <text x="640" y="588" class="white" font-size="32" font-weight="700" text-anchor="middle">書類作成ではなく、施策を選ぶための判断材料の整備が問われている</text>
+  </g>
+
+  <g id="source">
+    <text x="1216" y="684" fill="#687386" font-size="16" text-anchor="end">出典：国土交通省「物流効率化法」理解促進ポータル</text>
+  </g>
+</svg>
