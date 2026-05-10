@@ -1,27 +1,19 @@
 ---
-title: "Kotlin未経験のAIエンジニアが、Claude Codeで3日でギター練習Androidアプリを作った"
+title: "Kotlinを1行も書かずに、AIエンジニアがギター練習Androidアプリを作った（Claude Code × 3日）"
 emoji: "🎸"
 type: "tech"
-topics: ["claudecode", "android", "kotlin", "jetpackcompose", "個人開発"]
+topics: ["claudecode", "android", "kotlin", "個人開発", "音楽"]
 published: true
 ---
 
 :::message
-この記事は、**個人開発**で作っているAndroid向けギター練習アプリ FretInterval の開発記です。普段は AI エンジニア／データサイエンティストとして働いていて、Kotlin もAndroid開発も未経験の私が、Claude Code に書かせて3日でたたき台を作り、その後2ヶ月かけて磨き込んでいる過程を共有します。
+**個人開発**で作っているAndroid向けギター練習アプリ **FretInterval** の開発記です。Kotlin・Android未経験のAIエンジニアが、Claude Code に書かせて3日でたたき台を作り、2ヶ月磨き込んでいる過程を共有します。**Kotlin は1行も書いていません**。
 
-Google Play非公開・USBデバッグでの自端末配布で、いまのところ「自分専用」として運用しています。同じように、専門外領域の課題を AI 支援で解決したい人の参考になればと思って書いています。
+Google Play非公開・USBデバッグでの自端末配布で、「自分専用」として運用中。専門外領域を AI 支援で越境的に解くアプローチに興味がある方の参考になればと思って書いています。
 :::
-
-## はじめに
-
-Kotlinを一行も書いたことがありません。Android アプリ開発の経験もありません。
-
-それでも、ギター練習用の Android アプリ FretInterval を Claude Code で作って、いまは毎日使っています。たたき台ができるまで実質3日、安定して使えるようになるまで約2ヶ月でした。コードは私はほぼ1行も書いていません。
 
 ![FretInterval デモ](/images/fret-interval-android-guitar-app/demo.gif)
 *ルート音を C → D に変えると、指板上の度数表示がリアルタイムで切り替わる。*
-
-この記事は、その開発記録です。
 
 ## なぜ作ったか
 
