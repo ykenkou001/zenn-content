@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">公的データから判断材料へ</title>
+  <desc id="desc">公的データソースを分析・整理し、CLO判断材料へ変換する3カラムの流れ図。</desc>
+  <defs>
+    <style>
+      text { font-family: 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif; }
+      .navy { fill: #0F1F3D; }
+      .ink { fill: #172239; }
+      .muted { fill: #647083; }
+      .white { fill: #FFFFFF; }
+      .gold { fill: #C99A2E; }
+    </style>
+    <filter id="panelShadow" x="-8%" y="-8%" width="116%" height="124%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0F1F3D" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g id="background">
+    <rect width="1280" height="720" fill="#F5F7FA"/>
+    <rect x="0" y="0" width="1280" height="112" class="navy"/>
+    <rect x="0" y="112" width="1280" height="6" class="gold"/>
+  </g>
+
+  <g id="header">
+    <text x="64" y="68" class="white" font-size="38" font-weight="700">公的データから判断材料へ</text>
+    <text x="64" y="96" fill="#DCE4EF" font-size="18">データ取得で止めず、経営判断に使う形へ組み替える</text>
+  </g>
+
+  <g id="flow" filter="url(#panelShadow)">
+    <g id="public-data-sources">
+      <rect x="62" y="164" width="330" height="392" rx="6" fill="#FFFFFF"/>
+      <rect x="62" y="164" width="330" height="64" rx="6" fill="#0F1F3D"/>
+      <text x="227" y="205" class="white" font-size="25" font-weight="700" text-anchor="middle">公的データソース</text>
+      <text x="100" y="278" class="ink" font-size="23" font-weight="700">e-Stat（政府統計）</text>
+      <text x="100" y="324" class="ink" font-size="23" font-weight="700">国税庁法人番号API</text>
+      <text x="100" y="370" class="ink" font-size="23" font-weight="700">xROAD（道路交通量）</text>
+      <text x="100" y="416" class="ink" font-size="23" font-weight="700">気象庁（予報・警報）</text>
+      <text x="100" y="462" class="ink" font-size="23" font-weight="700">燃料価格（軽油・ガソリン）</text>
+    </g>
+
+    <g id="analysis-organization">
+      <rect x="475" y="164" width="330" height="392" rx="6" fill="#FFFFFF"/>
+      <rect x="475" y="164" width="330" height="64" rx="6" fill="#24496B"/>
+      <text x="640" y="205" class="white" font-size="25" font-weight="700" text-anchor="middle">分析・整理</text>
+      <text x="513" y="278" class="ink" font-size="23" font-weight="700">業界ベンチマーク</text>
+      <text x="513" y="324" class="ink" font-size="23" font-weight="700">ドライバー需給ギャップ</text>
+      <text x="513" y="370" class="ink" font-size="23" font-weight="700">シナリオシミュレーション</text>
+      <text x="513" y="416" class="ink" font-size="23" font-weight="700">業種別標準パッケージ</text>
+      <text x="513" y="462" class="ink" font-size="23" font-weight="700">出典管理</text>
+    </g>
+
+    <g id="clo-decision-materials">
+      <rect x="888" y="164" width="330" height="392" rx="6" fill="#FFFFFF"/>
+      <rect x="888" y="164" width="330" height="64" rx="6" fill="#C99A2E"/>
+      <text x="1053" y="205" class="white" font-size="25" font-weight="700" text-anchor="middle">CLO判断材料</text>
+      <text x="926" y="278" class="ink" font-size="23" font-weight="700">施策の優先順位</text>
+      <text x="926" y="324" class="ink" font-size="23" font-weight="700">選外理由</text>
+      <text x="926" y="370" class="ink" font-size="23" font-weight="700">進捗説明</text>
+      <text x="926" y="416" class="ink" font-size="23" font-weight="700">財務翻訳</text>
+      <text x="926" y="462" class="ink" font-size="23" font-weight="700">計画書ドラフト</text>
+    </g>
+  </g>
+
+  <g id="arrows">
+    <line x1="406" y1="360" x2="461" y2="360" stroke="#C99A2E" stroke-width="7" stroke-linecap="round"/>
+    <path d="M452 339 L486 360 L452 381 Z" class="gold"/>
+    <line x1="819" y1="360" x2="874" y2="360" stroke="#C99A2E" stroke-width="7" stroke-linecap="round"/>
+    <path d="M865 339 L899 360 L865 381 Z" class="gold"/>
+  </g>
+
+  <g id="message">
+    <rect x="162" y="594" width="956" height="58" rx="4" fill="#0F1F3D"/>
+    <text x="640" y="633" class="white" font-size="28" font-weight="700" text-anchor="middle">自社データが揃う前から判断のたたき台は作れる</text>
+  </g>
+</svg>

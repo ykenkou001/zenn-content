@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">CLO支援アプリでできること、できないこと</title>
+  <desc id="desc">CLO支援アプリが実装で支援できる範囲と、保証しない・解けない範囲を左右2カラムで整理した図。</desc>
+  <defs>
+    <style>
+      text { font-family: 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif; }
+      .navy { fill: #0F1F3D; }
+      .ink { fill: #172239; }
+      .muted { fill: #647083; }
+      .white { fill: #FFFFFF; }
+      .gold { fill: #C99A2E; }
+      .green { fill: #1F6F5B; }
+      .orange { fill: #B45A3C; }
+    </style>
+    <filter id="panelShadow" x="-8%" y="-8%" width="116%" height="124%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0F1F3D" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g id="background">
+    <rect width="1280" height="720" fill="#F5F7FA"/>
+    <rect x="0" y="0" width="1280" height="112" class="navy"/>
+    <rect x="0" y="112" width="1280" height="6" class="gold"/>
+  </g>
+
+  <g id="header">
+    <text x="64" y="68" class="white" font-size="37" font-weight="700">CLO支援アプリでできること、できないこと</text>
+    <text x="64" y="96" fill="#DCE4EF" font-size="18">技術支援の範囲を明確にし、経営責任と組織調整を混同しない</text>
+  </g>
+
+  <g id="columns" filter="url(#panelShadow)">
+    <g id="supported-by-implementation">
+      <rect x="74" y="154" width="540" height="420" rx="6" fill="#FFFFFF"/>
+      <rect x="74" y="154" width="540" height="68" rx="6" class="green"/>
+      <text x="344" y="198" class="white" font-size="29" font-weight="700" text-anchor="middle">実装で支援できる</text>
+      <circle cx="116" cy="272" r="8" class="green"/>
+      <text x="142" y="279" class="ink" font-size="22">公的データ統合とベンチマーク</text>
+      <circle cx="116" cy="323" r="8" class="green"/>
+      <text x="142" y="330" class="ink" font-size="22">業種別パッケージに沿った計画書ドラフト</text>
+      <circle cx="116" cy="374" r="8" class="green"/>
+      <text x="142" y="381" class="ink" font-size="22">施策評価4軸スコアリング＋選外理由生成</text>
+      <circle cx="116" cy="425" r="8" class="green"/>
+      <text x="142" y="432" class="ink" font-size="22">出典付き数値の自動追跡</text>
+      <circle cx="116" cy="476" r="8" class="green"/>
+      <text x="142" y="483" class="ink" font-size="22">成果物（PPT/Word/Excel/Markdown）一括生成</text>
+      <circle cx="116" cy="527" r="8" class="green"/>
+      <text x="142" y="534" class="ink" font-size="22">シナリオシミュレーション</text>
+    </g>
+
+    <g id="not-guaranteed-or-unsolved">
+      <rect x="666" y="154" width="540" height="420" rx="6" fill="#FFFFFF"/>
+      <rect x="666" y="154" width="540" height="68" rx="6" class="orange"/>
+      <text x="936" y="198" class="white" font-size="29" font-weight="700" text-anchor="middle">保証しない・解けない</text>
+      <circle cx="708" cy="272" r="8" class="orange"/>
+      <text x="734" y="279" class="ink" font-size="22">自社データの粒度・品質確保</text>
+      <circle cx="708" cy="323" r="8" class="orange"/>
+      <text x="734" y="330" class="ink" font-size="22">部門間調整・取引先交渉</text>
+      <circle cx="708" cy="374" r="8" class="orange"/>
+      <text x="734" y="381" class="ink" font-size="22">法令準拠の最終判断</text>
+      <circle cx="708" cy="425" r="8" class="orange"/>
+      <text x="734" y="432" class="ink" font-size="22">投資判断・経営責任</text>
+      <circle cx="708" cy="476" r="8" class="orange"/>
+      <text x="734" y="483" class="ink" font-size="22">スコープ3・ESG開示の統合判断</text>
+      <circle cx="708" cy="527" r="8" class="orange"/>
+      <text x="734" y="534" class="ink" font-size="22">実務での妥当性検証</text>
+    </g>
+  </g>
+
+  <g id="message">
+    <rect x="126" y="614" width="1028" height="58" rx="4" fill="#0F1F3D"/>
+    <text x="640" y="652" class="white" font-size="25" font-weight="700" text-anchor="middle">技術で行ける範囲と、組織や人間関係で動かすしかない範囲の境界線</text>
+  </g>
+</svg>
