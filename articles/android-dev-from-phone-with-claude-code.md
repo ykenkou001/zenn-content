@@ -267,9 +267,17 @@ PC で diff を読みながら「ここのこの行のこの値を変えて」�
 
 ### 関連記事
 
-このフローは、私が個人開発している Android 向けギター練習アプリ FretInterval の運用知見ベースです。アプリ自体の開発記は親記事にまとめています。
+**親記事：このフローは Android 向けギター練習アプリ FretInterval の運用知見ベースです。アプリ自体の開発記はこちら。**
 
 https://zenn.dev/ykenkou001/articles/fret-interval-android-guitar-app
+
+**同じ著者による別ドメインの越境個人開発記：規制対応SaaS（CLO支援アプリ）をMCP＋Next.jsで個人開発した話。**
+
+https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support
+
+**設計編：上記CLOアプリの設計を3回作り直した経験から抽出した、MCPファースト設計の3原則。**
+
+https://zenn.dev/ykenkou001/articles/mcp-first-regulatory-saas
 
 ### 続編予告
 

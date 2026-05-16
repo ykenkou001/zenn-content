@@ -353,16 +353,23 @@ Level 0のヒントなしモード（音名タップ）では `fretNotes = empty
 
 Google Play 配信の判断は v1.2 完成後に持ち越しています。先に整える必要はないと思っています。
 
-### 関連記事の予告
+### 続編・関連記事
 
-この記事で触れたトピックのうち、特に深く書きたい4本を続編として準備中です。
+この記事で触れたトピックのうち、続編として公開済みのものを置いておきます。
+
+**[公開済] スマホ1台で開発フローを完結させる運用編（FretIntervalで実際に回していたフロー）：**
+
+https://zenn.dev/ykenkou001/articles/android-dev-from-phone-with-claude-code
+
+**[公開済] 同じ著者による別ドメインの越境個人開発記。規制対応SaaS（CLO支援アプリ）をMCP＋Next.jsで作った話：**
+
+https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support
+
+**[準備中] さらに深く書きたいテーマ：**
 
 - 「AudioTrack で ±0.01% の BPM 精度を出す ─ Bresenham 累積フレームカウント詳解」
 - 「Jetpack Compose Canvas で動的な指板UIを描く ─ 座標系・ヒット判定・パフォーマンス」
 - 「Kotlin 未経験で Android アプリを Claude Code に書かせるためのプロンプト設計」
-- 「スマホ1台で完結する Claude Code × GitHub Actions の Android 個人開発フロー」
-
-公開したらこの記事末にもリンクを追加します。
 
 ## まとめ
 

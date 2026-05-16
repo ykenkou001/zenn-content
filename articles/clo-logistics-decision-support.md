@@ -289,6 +289,20 @@ CLO選任義務を含む物流効率化法の規制的措置は、単に物流�
 
 https://d1zei8qivkf3cr.cloudfront.net/
 
+## 関連記事
+
+**設計編：このアプリで設計を3回作り直した経験から抽出した、MCPファースト設計の3原則。**
+
+https://zenn.dev/ykenkou001/articles/mcp-first-regulatory-saas
+
+**同じ著者による別ドメインの越境個人開発記：Kotlin 未経験のAIエンジニアが Claude Code で3日でAndroidギター練習アプリを作った話。**
+
+https://zenn.dev/ykenkou001/articles/fret-interval-android-guitar-app
+
+**運用フロー編：上記Androidアプリの開発で実際に回していた、スマホ1台で個人開発を進めるフロー（Claude Code × GitHub Actions）。**
+
+https://zenn.dev/ykenkou001/articles/android-dev-from-phone-with-claude-code
+
 ## 参考
 
 - 「物流効率化法」理解促進ポータルサイト: https://www.revised-logistics-act-portal.mlit.go.jp/

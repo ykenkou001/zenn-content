@@ -118,9 +118,21 @@
 
 ▶ 開発URL（個人開発PoC、予告なく停止する場合あり）：https://d1zei8qivkf3cr.cloudfront.net/
 
-▶ Zenn記事（技術構成・設計思想）：[規制対応SaaSをMCP＋Next.jsで個人開発：CLOの意思決定支援PoC](https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support)
-
 ▶ 一次資料：[国土交通省 物流効率化法ポータル](https://www.revised-logistics-act-portal.mlit.go.jp/) ／ [経済産業省 物流効率化法](https://www.meti.go.jp/policy/economy/distribution/butsuryu-kouritsuka.html)
+
+---
+
+## 関連するZenn記事（技術側の記録）
+
+このCLO支援アプリの「なぜ作ったか」をnoteに書いたのに対して、Zennには技術構成・設計判断・運用ノウハウの側を書いています。技術詳細に関心がある方は、こちらもどうぞ。
+
+▶ [規制対応SaaSをMCP＋Next.jsで個人開発：CLOの意思決定支援PoC](https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support)（CLO支援アプリの技術構成と実装詳細）
+
+▶ [LLMから呼ばれるアプリをMCPファーストで設計するときの3つの原則](https://zenn.dev/ykenkou001/articles/mcp-first-regulatory-saas)（このアプリの設計判断を抽象化した記事）
+
+▶ [Kotlinを1行も書かずに、AIエンジニアがギター練習Androidアプリを作った（Claude Code × 3日）](https://zenn.dev/ykenkou001/articles/fret-interval-android-guitar-app)（同じ越境個人開発スタイルでAndroidに踏み込んだ別ドメインの記録）
+
+▶ [PCを開かずにAndroidアプリを育てる：スマホ1台で回す Claude Code × GitHub Actions 個人開発フロー](https://zenn.dev/ykenkou001/articles/android-dev-from-phone-with-claude-code)（PCを開けない時間に開発を進める運用フロー）
 
 ---
 

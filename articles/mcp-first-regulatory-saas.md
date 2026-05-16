@@ -371,6 +371,20 @@ CLO支援アプリの実装詳細──12個のMCPツールの中身、AWSサー
 
 https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support
 
+### 関連記事
+
+**同じ著者による別ドメインの越境個人開発記：Kotlin 未経験のAIエンジニアが Claude Code で3日でAndroidギター練習アプリを作った話。**
+
+https://zenn.dev/ykenkou001/articles/fret-interval-android-guitar-app
+
+**運用フロー編：上記Androidアプリの開発で実際に回していた、スマホ1台で個人開発を進めるフロー（Claude Code × GitHub Actions）。**
+
+https://zenn.dev/ykenkou001/articles/android-dev-from-phone-with-claude-code
+
+**業務・物語サイド：なぜCLO支援アプリを作ったのか、規制対応SaaSを個人で追う動機を、業務的視点でまとめた読み物（note）。**
+
+▶ note記事: [CLO義務化を見据えて支援アプリを作った、物流システムエンジニアの調査と実装ログ](https://note.com/open_hound6976/n/nec3134b15596)
+
 :::message
 この記事で書いた3原則は、個人開発のCLO支援アプリで設計を3回作り直した経験から抽出したものです。別ドメインの業務アプリで反例や追加の論点があれば、ぜひ教えてください。
 :::
