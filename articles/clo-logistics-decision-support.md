@@ -1,5 +1,5 @@
 ---
-title: "規制対応SaaSをMCP＋Next.jsで個人開発：CLO（物流統括管理者）の意思決定支援PoC"
+title: "CLO（物流統括管理者）支援アプリを個人開発：規制対応SaaSをMCP＋Next.jsで作る"
 emoji: "⚖️"
 type: "tech"
 topics: ["mcp", "claudecode", "nextjs", "fastapi", "物流"]

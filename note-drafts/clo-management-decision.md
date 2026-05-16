@@ -126,7 +126,7 @@
 
 このCLO支援アプリの「なぜ作ったか」をnoteに書いたのに対して、Zennには技術構成・設計判断・運用ノウハウの側を書いています。技術詳細に関心がある方は、こちらもどうぞ。
 
-▶ [規制対応SaaSをMCP＋Next.jsで個人開発：CLOの意思決定支援PoC](https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support)（CLO支援アプリの技術構成と実装詳細）
+▶ [CLO（物流統括管理者）支援アプリを個人開発：規制対応SaaSをMCP＋Next.jsで作る](https://zenn.dev/ykenkou001/articles/clo-logistics-decision-support)（CLO支援アプリの技術構成と実装詳細）
 
 ▶ [LLMから呼ばれるアプリをMCPファーストで設計するときの3つの原則](https://zenn.dev/ykenkou001/articles/mcp-first-regulatory-saas)（このアプリの設計判断を抽象化した記事）
 
